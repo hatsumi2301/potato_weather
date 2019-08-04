@@ -13,6 +13,6 @@ defmodule PotatoWeather do
 
   """
   def hello do
-    :world
+    IO.inspect(Elasticsearch.get(ElasticSearch.ElasticSearchCluster, "/_cat/health"))
   end
 end

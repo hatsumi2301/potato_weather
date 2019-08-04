@@ -14,6 +14,7 @@ defmodule PotatoWeather.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {PotatoWeather.Application, []},
       extra_applications: [:logger]
     ]
   end
@@ -21,7 +22,9 @@ defmodule PotatoWeather.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:elasticsearch, "~> 1.0.0"}
+      {:elasticsearch, "~> 1.0.0"},
+      {:ecto, "~> 3.1"},
+      {:poison, "~> 4.0"}
     ]
   end
 end
